@@ -1,9 +1,8 @@
 require 'net/http'
 require 'json'
 
-# Fetch the exchange rate and converted amount from the API
 def fetch_conversion(base_currency, target_currency, amount)
-  access_key = "72a00190df5d1e4a33eedfd60a56d89c" # Tu clave API
+  access_key = "72a00190df5d1e4a33eedfd60a56d89c" 
   url = URI("https://api.exchangerate.host/convert?access_key=#{access_key}&from=#{base_currency}&to=#{target_currency}&amount=#{amount}")
   begin
     response = Net::HTTP.get(url)
